@@ -4,17 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RecyclerViewTest.MainActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="385dp"
+        android:layout_height="@dimen/recycler_heught"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="主畫面"
-        android:textSize="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="455dp" />
+
+    <Button
+        android:id="@+id/head_add"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:text="head增加"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/head_delete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/head_delete"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:text="head刪除"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botton_add"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/head_add" />
+
+    <Button
+        android:id="@+id/botton_add"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:text="bottom增加"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_delete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/head_delete" />
+
+    <Button
+        android:id="@+id/bottom_delete"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:text="bottom刪除"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/botton_add" />
+
+
+
+
 </android.support.constraint.ConstraintLayout>
