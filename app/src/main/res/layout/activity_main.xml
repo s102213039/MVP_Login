@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".RecyclerViewTest.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
         android:id="@+id/recycler"
         android:layout_width="385dp"
         android:layout_height="@dimen/recycler_heught"

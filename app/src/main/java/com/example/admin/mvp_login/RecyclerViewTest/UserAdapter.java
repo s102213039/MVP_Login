@@ -56,13 +56,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
     public void addHead(String itemName){
         list.add(0,itemName);
-        notifyDataSetChanged();
+        notifyItemInserted(0);
     }
 
     public void deleteHead(){
         if(list.size()>0) {
             list.remove(0);
-            notifyDataSetChanged();
+            notifyItemRemoved(0);
         }else{
             Toast.makeText(mContext,"List已空!",Toast.LENGTH_SHORT).show();
         }
@@ -70,13 +70,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
     public void addBottom(String itemName){
         list.add(itemName);
-        notifyDataSetChanged();
+        notifyItemInserted(list.size());
     }
 
     public void deleteBottom(){
         if(list.size()>0) {
             list.remove(list.size() - 1);
-            notifyDataSetChanged();
+            notifyItemRemoved(list.size());
         }else{
             Toast.makeText(mContext,"List已空!",Toast.LENGTH_SHORT).show();
         }

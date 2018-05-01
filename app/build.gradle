@@ -30,4 +30,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+
+    //有很多功能的RecyclerView https://github.com/yanzhenjie/SwipeRecyclerView
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
 }
